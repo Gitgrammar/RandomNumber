@@ -226,14 +226,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107a5527f6d824ab49f15cfed31ab664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 0}
-  score: {fileID: 0}
-  tg: {fileID: 0}
-  startButton: {fileID: 0}
-  rankingPanel: {fileID: 0}
-  cells: {fileID: 0}
-  prefab: {fileID: 0}
-  sprites: []
+  name: {fileID: 968301205}
+  score: {fileID: 730703709}
+  tg: {fileID: 101428528}
+  startButton: {fileID: 975732495}
+  formPanel: {fileID: 96756156}
+  rankingPanel: {fileID: 754712989}
+  cells: {fileID: 1274662631}
+  prefab: {fileID: 3060284701785864063, guid: 36e72e10c71d1430988da7a350bf052c, type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 22e3851b4bd534a61b782b4510ca10a8, type: 3}
+  - {fileID: 21300000, guid: fe0bbe252b19947c0ab0bddc26d851c3, type: 3}
 --- !u!1 &96756156
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &96756157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -771,7 +774,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 567000462}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 27027987}
+        m_MethodName: OnSendClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &567000462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,6 +2094,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 730703709}
   startButton: {fileID: 975732495}
+  formPanel: {fileID: 96756156}
+  RankingPanel: {fileID: 754712989}
 --- !u!1 &1997316050
 GameObject:
   m_ObjectHideFlags: 0

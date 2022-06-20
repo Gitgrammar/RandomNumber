@@ -22,7 +22,7 @@ public class CanvasController : MonoBehaviour
     public Sprite[] sprites;
     float scaleFactor = 1.0f;
 
-    public void SendClick()
+    public void OnSendClick()
     {
         StartCoroutine(PostConnect());
     }
@@ -70,7 +70,7 @@ public class CanvasController : MonoBehaviour
                     name.text = ranking.list[i].name;
 
                     Text scoreText = cell.transform.Find("Score").GetComponent<Text>();
-                    scoreText.text = ranking.list[i].score.Tostring();
+                    scoreText.text = ranking.list[i].score.ToString();
 
 
                 }

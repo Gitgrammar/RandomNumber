@@ -9,6 +9,8 @@ public class CubeController : MonoBehaviour
     public GameObject startButton;
     private Coroutine game;
     private bool isPlay;
+    public GameObject formPanel;
+    public GameObject RankingPanel;
 
     void Update()
     {
@@ -22,6 +24,7 @@ public class CubeController : MonoBehaviour
                 {
                     StopCoroutine(game);
                     isPlay = false;
+                    formPanel.SetActive(true);
                 }
             }
         }
@@ -40,5 +43,16 @@ public void StartClick()
         game = StartCoroutine(RandomNum());
         startButton.SetActive(false);
         isPlay = true;
+        Transform cells = RankingPanel.transform.FindChild("Cells");
+        for(int i = 0; i < cells.childCount; i++) {
+            GameObject.Destroy(cells.GetChild(i).gameObject);
+
+            Vector3 vec = cells.localPosition;
+            vec.y = 0f;
+            cells.localPosition = vec;
+
+            RankingPanel.SetActive(false);
+        }
+
     }
 }
