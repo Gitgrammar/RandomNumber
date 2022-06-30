@@ -37,6 +37,8 @@ public class CanvasController : MonoBehaviour
         form.AddField("sex", tgl.name == "Man" ? 0 : 1);
         form.AddField("count", COUNT);
         string url = "http://localhost:8080/ScoreAPI/GetRanking";
+
+        Debug.Log("Confirmation to Link");
         UnityWebRequest uwr = UnityWebRequest.Post(url, form);
         yield return uwr.SendWebRequest();
         if (uwr.isNetworkError)

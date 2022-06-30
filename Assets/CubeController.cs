@@ -9,6 +9,7 @@ public class CubeController : MonoBehaviour
     public GameObject startButton;
     private Coroutine game;
     private bool isPlay;
+
     public GameObject formPanel;
     public GameObject RankingPanel;
 
@@ -43,7 +44,7 @@ public void StartClick()
         game = StartCoroutine(RandomNum());
         startButton.SetActive(false);
         isPlay = true;
-        Transform cells = RankingPanel.transform.FindChild("Cells");
+        Transform cells = RankingPanel.transform.Find("Cells");
         for(int i = 0; i < cells.childCount; i++) {
             GameObject.Destroy(cells.GetChild(i).gameObject);
 
